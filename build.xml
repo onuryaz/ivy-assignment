@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="ivy example" default="resolve" xmlns:ivy="antlib:org.apache.ivy.ant">
-  
-  <property name="build.dir" location="target"/>
 
-  <target name="resolve" depends="build.dir" description="Use ivy to resolve classpaths"/>
-  
-  <ivy:resolve/>
+	<project>
 
-</project>
+	    <target name="clean">
+	        <delete dir="build"/>
+	    </target>
+
+	    <target name="compile">
+	        <mkdir dir="build/classes"/>
+	        <javac srcdir="src" destdir="build/classes"/>
+	    </target>
+
+	    <target name="jar">
+	        <mkdir dir="build/jar"/>
+	        <jar destfile="build/jar/assignmet.jar" basedir="build/classes">
+	            <manifest>
+	                <attribute name="Main-Class" value="MyExampleClass"/>
+	            </manifest>
+	        </jar>
+	    </target>
+
+	    <target name="run">
+	        <java jar="build/jar/assignment.jar" fork="true"/>
+	    </target>
+
+	</project>
