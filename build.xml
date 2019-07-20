@@ -1,4 +1,4 @@
-<project name="test ivy" default="test" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="Java-Assignment" default="test" xmlns:ivy="antlib:org.apache.ivy.ant">
   <target name="test" description="Test ivy installation">
      <ivy:settings />
   </target>
