@@ -1,0 +1,11 @@
+<ivy-module version="2.0">
+
+
+    <info organisation="org.apache" module="java-assignment"/>
+
+    <dependencies>
+        <dependency org="junit" name="junit" rev="4.11"/>
+        <dependency org="logging.log4j" name="log4j-api" rev="2.12.0" />
+  		<dependency org="logging.log4j" name="log4j-core" rev="2.12.0" />
+    </dependencies>
+</ivy-module>
