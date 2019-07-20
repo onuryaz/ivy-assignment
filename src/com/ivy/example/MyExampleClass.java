@@ -1,10 +1,11 @@
 package com.ivy.example;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MyExampleClass {
 
-	static Logger log = Logger.getLogger(MyExampleClass.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(MyExampleClass.class);
 	
 	public static void main(String[] args) {
 		if (args.length == 2) {
@@ -17,7 +18,7 @@ public class MyExampleClass {
 			}
 		} else {
 			System.err.println("Missing Input: Please enter TWO numbers.");
-			log.info("This is an exception message");
+			logger.info("This is an exception message");
 		}
 	}
 }
